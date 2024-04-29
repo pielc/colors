@@ -39,6 +39,13 @@
 	}
 	.color-tooltip {
 		background: rgb(0, 0, 0);
+		font-family: 'impact_label_reversedregular';
 		@apply relative text-white w-auto -top-12  left-1/2 -translate-x-1/2 min-w-max scale-0 text-2xl;
+	}
+	@font-face {
+		font-family: 'impact_label_reversedregular';
+		src: url('fonts/Impact_Label_Reversed-webfont.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
 	}
 </style>
