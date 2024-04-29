@@ -1,6 +1,7 @@
 <script>
 	import { v4 as uuidv4 } from 'uuid';
 	import { extractColors } from '$lib/extractColors';
+	import '@fontsource/dekko';
 
 	async function getColors() {
 		const response = await fetch('/api/colors');
@@ -38,14 +39,7 @@
 		background-color: #fff; /* Adjust the background color */
 	}
 	.color-tooltip {
-		background: rgb(0, 0, 0);
-		font-family: 'impact_label_reversedregular';
-		@apply relative text-white w-auto -top-12  left-1/2 -translate-x-1/2 min-w-max scale-0 text-2xl;
-	}
-	@font-face {
-		font-family: 'impact_label_reversedregular';
-		src: url('fonts/Impact_Label_Reversed-webfont.woff') format('woff');
-		font-weight: normal;
-		font-style: normal;
+		font-family: 'Dekko', cursive;
+		@apply relative w-auto -top-12  left-1/2 -translate-x-1/2 min-w-max scale-0 text-2xl;
 	}
 </style>

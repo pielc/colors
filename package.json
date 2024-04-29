@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/dekko": "^5.0.20",
 		"@sveltejs/adapter-vercel": "^5.2.0",
 		"autoprefixer": "^10.4.19",
 		"mathjs": "^12.4.1",

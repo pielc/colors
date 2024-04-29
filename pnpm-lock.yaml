@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/dekko':
+        specifier: ^5.0.20
+        version: 5.0.20
       '@sveltejs/adapter-vercel':
         specifier: ^5.2.0
         version: 5.3.0(@sveltejs/kit@2.5.7(@sveltejs/vite-plugin-svelte@3.1.0(svelte@4.2.15)(vite@5.2.10))(svelte@4.2.15)(vite@5.2.10))
@@ -249,6 +252,9 @@ packages:
   '@eslint/js@9.1.1':
     resolution: {integrity: sha512-5WoDz3Y19Bg2BnErkZTp0en+c/i9PvgFS7MBe1+m60HjFr0hrphlAGp4yzI7pxpt4xShln4ZyYp4neJm8hmOkQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource/dekko@5.0.20':
+    resolution: {integrity: sha512-S6PlAkD2564wi+EbnrnB5mU5Uwv2bjl2BBzXyLfgNlwv7fnGfMb87rHDtbs7xnElmYnbZmKOovUU8cY3u7MMqg==}
 
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
@@ -1835,6 +1841,8 @@ snapshots:
       - supports-color
 
   '@eslint/js@9.1.1': {}
+
+  '@fontsource/dekko@5.0.20': {}
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
