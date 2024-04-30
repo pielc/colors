@@ -4,13 +4,31 @@
 	import '@fontsource/dekko';
 
 	async function getColors() {
+		return ['#90bcb6', '#c9d9e5', '#099094', '#b33a54', '#1e2823', '#649e9a', '#396056'];
 		const response = await fetch('/api/colors');
 		const pixels = await response.json();
 		return extractColors(pixels.pixData);
 	}
+
+	let darkMode = false;
+
+	function handleSwitchDarkMode() {
+		darkMode = !darkMode;
+		darkMode
+			? document.documentElement.classList.add('dark')
+			: document.documentElement.classList.remove('dark');
+	}
 </script>
 
 <div class="dotted-background">
+	<img
+		src={darkMode ? 'moon.svg' : 'sun.svg'}
+		alt="light"
+		width="80"
+		height="80"
+		class="checkbox absolute top-0 right-0"
+		on:click={handleSwitchDarkMode}
+	/>
 	<div class="flex justify-center pb-2 pt-4">
 		<img src="images/dh.png" id="main-image" alt="dh" />
 	</div>
@@ -34,12 +52,17 @@
 <style>
 	.dotted-background {
 		height: 100vh;
-		background-image: radial-gradient(circle, #333 1px, transparent 1px);
+		background-image: radial-gradient(circle, #555 1px, transparent 1px);
 		background-size: 15px 15px; /* Adjust the spacing between dots */
-		background-color: #fff; /* Adjust the background color */
+		@apply bg-white dark:bg-[#111];
 	}
 	.color-tooltip {
 		font-family: 'Dekko', cursive;
-		@apply relative w-auto -top-12  left-1/2 -translate-x-1/2 min-w-max scale-0 text-2xl;
+		@apply relative w-auto -top-12 left-1/2 -translate-x-1/2
+			min-w-max scale-0 text-2xl text-black dark:text-white;
+	}
+	.checkbox {
+		cursor: pointer;
+		user-select: none;
 	}
 </style>
