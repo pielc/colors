@@ -4,7 +4,7 @@
 	import '@fontsource/dekko';
 
 	async function getColors() {
-		return ['#90bcb6', '#c9d9e5', '#099094', '#b33a54', '#1e2823', '#649e9a', '#396056'];
+		// return ['#90bcb6', '#c9d9e5', '#099094', '#b33a54', '#1e2823', '#649e9a', '#396056'];
 		const response = await fetch('/api/colors');
 		const pixels = await response.json();
 		return extractColors(pixels.pixData);
