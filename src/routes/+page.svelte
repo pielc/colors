@@ -33,7 +33,7 @@
 		<img src="images/dh.png" id="main-image" alt="dh" />
 	</div>
 	{#await getColors()}
-		<div class="flex justify-center mt-20">...coming</div>
+		<div class="flex justify-center mt-20 text-black dark:text-white">...coming</div>
 	{:then colors}
 		<div class="flex justify-center mt-20">
 			{#each colors as color (uuidv4())}
