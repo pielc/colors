@@ -26,7 +26,7 @@ export function rgbToHex(r, g, b) {
 export const extractColors = (pixels) =>
 	new Promise((res, rej) => {
 		console.log('tip');
-		const result = skmeans(pixels, 7, 'kmpp', 3000);
+		const result = skmeans(pixels, 8, 'kmpp', 3000);
 		console.log('top');
 
 		const colors = result.centroids.map((/** @type {number[]} */ e) => {
